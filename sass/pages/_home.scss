@@ -1,0 +1,25 @@
+.section-about {
+  padding: 8rem;
+
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
+
+  @include respond(phone) {
+    padding: 4rem 2rem;
+  }
+}
+
+.section-creation {
+  padding: 8rem;
+
+  @include respond(tab-port) {
+    padding: 4rem;
+    margin-top: 20rem;
+  }
+
+  @include respond(phone) {
+    padding: 4rem 2rem;
+    margin: 10rem 0 5rem 0;
+  }
+}

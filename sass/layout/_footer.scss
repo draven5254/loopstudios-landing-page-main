@@ -1,0 +1,121 @@
+.section-footer {
+  background-color: black;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+
+  @include respond(tab-port) {
+    padding: 1rem 2rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    text-align: center;
+  }
+}
+
+.nav-footer {
+  padding-top: 2rem;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      padding-right: 2.5rem;
+    }
+
+    @include respond(tab-port) {
+      &:not(:last-child) {
+        padding-right: 1rem;
+      }
+    }
+
+    @include respond(phone) {
+      display: block;
+
+      &:not(:last-child) {
+        padding: 0rem 0rem 2rem;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: $White;
+    font-size: 1rem;
+    font-family: $Josefin-Sans;
+  }
+
+  &__link::before {
+    content: "";
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $White;
+  }
+
+  &__link:hover::before {
+    left: 50%;
+    width: 50%;
+  }
+
+  @include respond(phone) {
+    flex-direction: column; /* Stack items vertically for smaller screens */
+  }
+}
+
+.socmed {
+  display: flex;
+  padding-bottom: 2rem;
+  flex-direction: row-reverse;
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: $White;
+    font-size: 1rem;
+    font-family: $Josefin-Sans;
+  }
+
+  &__link::before {
+    content: "";
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $White;
+  }
+
+  &__link:hover::before {
+    left: 50%;
+    width: 100%;
+  }
+}
+
+.credits {
+  color: $Dark-Gray;
+  font-size: 1rem;
+}

@@ -1,0 +1,78 @@
+.main-container {
+  display: flex;
+  position: relative;
+}
+
+.img-box {
+  clip-path: polygon(0 0, 100% 0, 100% 37%, 74% 37%, 74% 100%, 0 100%);
+
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    object-fit: fill;
+  }
+}
+
+.img-box img {
+  @include respond(phone) {
+    width: 50%;
+  }
+}
+
+.img-dtls {
+  margin-left: -20rem;
+  position: relative;
+  // padding: 10rem;
+  background-color: red;
+}
+
+.title {
+  font-size: 3rem;
+  color: black;
+  text-transform: uppercase;
+  font-family: $Josefin-Sans;
+  font-weight: 300;
+  position: absolute;
+  left: 15rem;
+  width: 25rem;
+  top: 17rem;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+    left: -15rem;
+    top: 35rem;
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+    left: -22rem;
+    top: 17rem;
+    text-align: center;
+  }
+}
+
+.parag {
+  font-size: 1rem;
+  color: $Dark-Gray;
+  font-family: $Josefin-Sans;
+  position: absolute;
+  top: 27rem;
+  left: 15rem;
+  width: 27rem;
+
+  @include respond(tab-port) {
+    font-size: 1.2rem;
+    left: -17.5rem;
+    top: 42rem;
+    width: 30rem;
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    font-size: 1rem;
+    left: -18rem;
+    top: 23rem;
+    width: 17rem;
+    padding-bottom: 5rem;
+  }
+}
